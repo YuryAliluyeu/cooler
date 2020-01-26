@@ -2,10 +2,190 @@ html, body {
 	margin: 0;
 	padding: 0;
 	height: 100%;
+	width: 100%;
 	font-family: 'Maven Pro', sans-serif;
+	background: url("../img/body-background.png") repeat;
+	box-sizing: border-box;
+	}
+
+.container{
+	width: 100%;
+	max-width: 1024px;
+	margin: 0 auto;
+	height: 100%;
+	
+	}
+
+.wrapper {
+	background: #e3e9e9;
+	min-height: 90%;
+	padding: 0px 0px 80px;	
+	}
+
+.wrapper:before {
+	content: "";
+	display: block;
+	height: 8px;
+	background: #000;
 }
 
-ul {
+.container-item {
+	padding: 0 34px;
+}
+
+
+/* HEADER */
+ 				/* LOGO   MENU ACCOUNT*/
+.top-block {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 0;
+	align-items: flex-end;
+}
+
+.header .account-menu a {
+	color: #595959;
+	font-size: 14px;
+	display: inline-block;
+	font-weight: bold;
+}
+
+
+.header .account-menu a:after {
+	content: "|";
+	display: inline-block;
+	padding: 0 5px;
+}
+
+.header .account-menu a:last-child:after {
+	content: "";
+}
+
+.header .account-menu a:hover {
+	color: #c42d21;
+}
+.header .account-menu li a {
+	display: inline-block;
+	text-decoration: none;
+	color: inherit;
+	font-weight: bold;
+}
+
+.header .account-menu li:after {
+	content: "|";
+	display: inline-block;
+	padding: 0 5px;
+}
+
+.header .account-menu li:last-child:after {
+	content: "";
+}
+
+.header .account-menu li a:hover {
+	color: #c42d21;
+}
+					/* NAVI HEADER*/
+
+.nav {
+	height: 34px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: rgb(135,32,24);
+	background: linear-gradient(0deg, rgba(135,32,24,1) 0%, rgba(193,75,58,1) 50%);
+	border-radius: 5px;
+	color: #ececec;
+}
+
+.nav-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 10px;
+	font-size: 16px;
+	height: 100%;
+    width: 60%;
+}
+
+.nav a {
+	display: inline-block;
+	color: #ececec;
+	text-decoration: none;
+	height: 34px;
+	}
+
+.nav-item:first-child {
+	border-radius: 5px 0 0 5px;
+
+}
+.active, .nav-link:hover {
+	height: 34px;
+	background: rgb(33,33,33);
+	background: linear-gradient(0deg, rgba(33,33,33,1) 0%, rgba(69,69,69,1) 50%);
+}
+
+.nav .call-us {
+	font-size: 18px;
+	background: rgb(33,33,33);
+	background: linear-gradient(0deg, rgba(33,33,33,1) 0%, rgba(69,69,69,1) 50%);
+	height: 34px;
+	display: flex;
+    align-items: center;
+    border-radius: 0 5px 5px 0;
+}
+
+.nav .call-us-wrapper {
+	display: flex;
+}
+
+.nav .call-us-wrapper:before {
+	content: "";
+	display: inline-block;
+	width: 90px;
+	height: 34px;
+	background-image: url("../img/call-us-bgr.png");
+}
+
+/* MAIN */
+
+
+
+/* FOOTER */
+.footer {
+	position: relative;
+	height: 80px;
+	width: 100%;
+	background-color: #000;
+	color: #ebe8e8;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: -80px;
+	box-sizing: border-box;
+}
+
+.footer a {
+	color: #ebe8e8;
+	text-decoration: none;
+	display: inline-block;
+	padding-left: 10px;
+}
+
+.footer .label {
+	font-size: 28px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+/*ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -13,23 +193,15 @@ ul {
 }
 
 li {
-	font-size: 14px;
+	
 	display: inline-block;
 }
 
-body {
-	background: url("../img/body-background.png") repeat;
-}
 
-.container {
-	width: 1024px;
-	margin: 0 auto;
-	background: #e3e9e9;
-}
 
-.container-item {
-	padding: 0 34px;
-}
+
+
+
 
 .content {
 	padding-top: 14px;
@@ -46,7 +218,7 @@ body {
     transition: 1s ease-in-out;
 }
 
-/*.content .main-block.active2 {
+.content .main-block.active2 {
 	margin-left: -675px;
 }
 
@@ -56,7 +228,7 @@ body {
 
 .content .main-block.active4 {
 	margin-left: -2025px;
-}*/
+}
 
 .content .main-block img {
 	display: inline-block;
@@ -68,16 +240,6 @@ body {
 	box-sizing: border-box;
 }
 
-.header .top-block {
-	display: flex;
-	justify-content: space-between;
-	padding: 10px 0;
-	align-items: flex-end;
-}
-
-.header .account-menu li {
-	color: #595959;
-}
 
 .header .account-menu li a {
 	display: inline-block;
@@ -159,33 +321,4 @@ body {
 	height: 34px;
 	background-image: url("../img/call-us-bgr.png");
 }
-
-.content-wrapper:before {
-	content: "";
-	display: block;
-	height: 8px;
-	background: #000;
-}
-
-.footer {
-	height: 80px;
-	background-color: #000;
-	color: #ebe8e8;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-top: -80px;
-}
-
-.footer a {
-	color: #ebe8e8;
-	text-decoration: none;
-	display: inline-block;
-	padding-left: 10px;
-}
-
-.footer .label {
-	font-size: 28px;
-	font-weight: bold;
-	text-transform: uppercase;
-}
+*/
